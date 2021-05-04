@@ -1,0 +1,7 @@
+{
+  "name": "measure-my-metro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
