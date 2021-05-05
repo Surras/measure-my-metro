@@ -8,6 +8,8 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
+www/
+
 .idea/
 .vscode/
 .sass-cache/
