@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
 
 @NgModule({
   declarations: [AppComponent],
