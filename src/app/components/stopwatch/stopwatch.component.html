@@ -2,7 +2,13 @@
   {{ time }}
 </p>
 
-<button *ngIf="!isRunning" (click)="start()">Start</button>
-<button *ngIf="isRunning" (click)="stop()">Stop</button>
+<ion-button *ngIf="!isRunning" color="primary" (click)="start()"
+  >Start <ion-icon name="play-outline"></ion-icon
+></ion-button>
+<ion-button *ngIf="isRunning" color="light" (click)="stop()"
+  >Stop <ion-icon name="pause-outline"></ion-icon
+></ion-button>
 
-<button *ngIf="timeBegan" (click)="reset()">Reset</button>
+<button *ngIf="timeBegan" (click)="reset()">
+  <ion-icon name="refresh-outline"></ion-icon>
+</button>
