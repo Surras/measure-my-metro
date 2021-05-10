@@ -8,7 +8,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'tracking-tab',
         loadChildren: () => import('./tracking-tab/tracking-tab.module').then(m => m.TrackingTabPageModule)
       },
       {
