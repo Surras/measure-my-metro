@@ -10,11 +10,11 @@ export class StopwatchComponent {
   public timeStopped: any = null;
   public stoppedDuration: any = 0;
   public started = null;
-  public running = false;
+  public isRunning = false;
   public blankTime = '00.00';
   public time = '00.00';
   start() {
-    if (this.running) return;
+    if (this.isRunning) return;
     if (this.timeBegan === null) {
       this.reset();
       this.timeBegan = new Date();
@@ -24,15 +24,17 @@ export class StopwatchComponent {
       this.stoppedDuration = this.stoppedDuration + newStoppedDuration;
     }
     this.started = setInterval(this.clockRunning.bind(this), 20);
-    this.running = true;
+    this.isRunning = true;
   }
+  
   stop() {
-    this.running = false;
+    this.isRunning = false;
     this.timeStopped = new Date();
     clearInterval(this.started);
   }
+
   reset() {
-    this.running = false;
+    this.isRunning = false;
     clearInterval(this.started);
     this.stoppedDuration = 0;
     this.timeBegan = null;

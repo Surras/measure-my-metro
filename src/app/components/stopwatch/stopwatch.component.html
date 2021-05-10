@@ -1,5 +1,8 @@
 <p>
-{{ time }}
+  {{ time }}
 </p>
 
-<button (click)="start()">Start / Stop</button>
+<button *ngIf="!isRunning" (click)="start()">Start</button>
+<button *ngIf="isRunning" (click)="stop()">Stop</button>
+
+<button *ngIf="timeBegan" (click)="reset()">Reset</button>
