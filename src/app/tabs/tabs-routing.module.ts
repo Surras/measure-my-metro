@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('./tracking-tab/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('./tracking-tab/tracking-tab.module').then(m => m.TrackingTabPageModule)
       },
       {
         path: 'tab2',
@@ -17,14 +17,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/tracking-tab',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/tracking-tab',
     pathMatch: 'full'
   }
 ];

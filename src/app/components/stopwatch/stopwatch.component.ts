@@ -26,7 +26,7 @@ export class StopwatchComponent {
     this.started = setInterval(this.clockRunning.bind(this), 20);
     this.isRunning = true;
   }
-  
+
   stop() {
     this.isRunning = false;
     this.timeStopped = new Date();
